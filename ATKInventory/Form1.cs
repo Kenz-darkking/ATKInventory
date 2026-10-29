@@ -97,7 +97,7 @@ namespace ATKInventory
                     }
                 }
 
-                MessageBox.Show("Data pasien berhasil disimpan!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Data ATK berhasil disimpan!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 RefreshData();
             }
             catch (Exception ex)
@@ -112,7 +112,7 @@ namespace ATKInventory
         {
             if (string.IsNullOrEmpty(selectedId))
             {
-                MessageBox.Show("Silakan klik/pilih salah satu data pasien dari tabel terlebih dahulu!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Silakan klik/pilih salah satu data ATK dari tabel terlebih dahulu!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -134,7 +134,7 @@ namespace ATKInventory
                     }
                 }
 
-                MessageBox.Show("Data pasien dengan ID " + selectedId + " berhasil diperbarui!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Data ATK dengan ID " + selectedId + " berhasil diperbarui!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 RefreshData();
                 ClearForm();
             }
@@ -150,11 +150,11 @@ namespace ATKInventory
         {
             if (string.IsNullOrEmpty(selectedId))
             {
-                MessageBox.Show("Silakan klik/pilih salah satu data pasien dari tabel yang akan dihapus!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Silakan klik/pilih salah satu data ATK dari tabel yang akan dihapus!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            var confirm = MessageBox.Show("Apakah Anda yakin ingin menghapus data pasien dengan ID " + selectedId + "?", "Konfirmasi Hapus", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var confirm = MessageBox.Show("Apakah Anda yakin ingin menghapus data ATK dengan ID " + selectedId + "?", "Konfirmasi Hapus", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (confirm == DialogResult.Yes)
             {
                 try
@@ -170,7 +170,7 @@ namespace ATKInventory
                         }
                     }
 
-                    MessageBox.Show("Data pasien berhasil dihapus!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Data ATK dengan ID " + selectedId + " berhasil dihapus!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     RefreshData();
                     ClearForm();
                 }
